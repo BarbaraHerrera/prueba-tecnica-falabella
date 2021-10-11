@@ -1,37 +1,18 @@
 var expect = require('chai').expect;
 var request = require('request');
+var axios = require('axios');
+let users = require('../assets/json/user.json');
+const ProductList = require('../model/ProductList');
+var usuarioTest = require('./lib/subject/suites/usuario.test')
+var productoTest = require('./lib/subject/suites/producto.test')
+var ordenTest = require('./lib/subject/suites/orden.test')
 
-describe('Test de aceptacion', function(){
-    describe('Sitio Bubu', function(){
-        it('Contenido principal de la pagina bubu', function(done)
-        {
-            request('http://localhost:8080', function(error, response, body)
-            {
-                expect(body).to.equal('Hello Bubus');
-                done();
-            });
-        });
+describe('Test de aceptacion', async function(){
+    
+    describe('Usuarios - Casos de prueba', usuarioTest.bind(this));
 
+    describe('Productos - Casos de Prueba', productoTest.bind(this));
 
-        it('Status del sitio', function(done)
-        {
-            request('http://localhost:8080', function(error, response, body)
-            {
-                expect(response.statusCode).to.equal(200);
-                done();
-            });
-        });
-    });
-
-    describe('Sitio Bubu About', function(){
-        it('Sobre el contenido del sitio', function(done)
-        {
-            request('http://localhost:8080/about', function(error, response,body)
-            {
-                expect(response.statusCode).to.equal(404)
-                done();
-            });
-        });
-    });
-   
+    describe('Ordenes - Casos de Prueba', ordenTest.bind(this));
+ 
 });

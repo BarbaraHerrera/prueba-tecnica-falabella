@@ -1,0 +1,9 @@
+{
+    
+    "orderId":"01",
+    "rutUser":"18.188.222-0",
+    "productList": [{
+        "productId":"1",
+        "quantity": "1"
+    }]
+}
