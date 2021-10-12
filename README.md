@@ -1,8 +1,8 @@
-# Mini Ecommerce Prueba Técnica Falabella - Test Automation
+# Mini Ecommerce Prueba Técnica Falabella - Test Automation 💻  📝
 
 Mini mini muy mini Ecommerce es un proyecto desarrollado para realizar automatización de test cases para escenarios de compra en línea.
 
-## Instalación
+## Instalación 🔨
 
 Ejecute el siguiente comando git en su consola para descargar el proyecto
 
@@ -12,13 +12,18 @@ git clone https://github.com/BarbaraHerrera/prueba-tecnica-falabella.git
 
 ## Uso - Ubicarse en la raiz del proyecto
 
-#### Primero se ejecuta la aplicación node.js
+#### ✅ Empezamos levantando nuestro json server
+
+bash
+npm run server
+
+#### ✅ Segundo, se ejecuta la aplicación node.js
 
 bash
 node app.js
 
 
-#### Teniendo la aplicación ejecutándose, se ejecuta en otra consola el siguiente comando
+#### ✅ Teniendo la aplicación ejecutándose, se ejecuta en otra consola el siguiente comando
 
 bash
 npm test
