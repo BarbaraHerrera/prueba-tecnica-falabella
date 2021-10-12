@@ -4,6 +4,9 @@ var chaiHttp = require('chai-http');
 var axios = require('axios');
 let Product = require('../../../../model/Product');
 
+/**
+ * Metodo que ejecuta test cases para los escenarios de productos
+ */
 function suite(){
 
     var product;

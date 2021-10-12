@@ -1,0 +1,22 @@
+{
+    "users":
+    [ 
+        {
+            "name":"Barbara",
+            "rut":"18.188.222-0",
+            "address":"Casa 123",
+            "phone": "4563212"
+        }
+    ],
+
+    "products":
+    [ 
+        {
+            "productName":"playstation 5",
+            "productId":"1",
+            "description": "nueva consola 2021",
+            "stock" : "2"
+        }
+    ]
+
+}

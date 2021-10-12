@@ -3,6 +3,9 @@ var axios = require('axios');
 const ProductList = require('../../../../model/ProductList');
 let Order = require('../../../../model/Order');
 
+/**
+ * Metodo que ejecuta test cases para los escenarios de ordenes
+ */
 function suite(){
     var productList;
     var list;
@@ -16,7 +19,7 @@ function suite(){
          list.push(productList);
     })
 
-    it('Validar detalle de orden', function(done){
+    it('Detalle de orden', function(done){
         
         
         axios.post('http://localhost:8080/orders',  order).then(res =>{

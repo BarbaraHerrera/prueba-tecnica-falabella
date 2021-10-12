@@ -1,18 +1,30 @@
 var expect = require('chai').expect;
 var axios = require('axios');
-let users = require('../../../../assets/json/user.json');
 let User = require('../../../../model/User');
 
+require('mocha-allure-reporter');
+
+/**
+ * Metodo que ejecuta test cases para los escenarios de usuarios
+ */
 function suite(){    
     var user;
+
+    before(function(){
+        user = new User('Bubucela', '24.144.222-0', 'Casa 123', '4563212');
+    });
+
+    const testStep = allure.createStep("initial", () => {
+       
+    });
 
     it('Consulta exitosa de usuarios', async function()
     {
         let respuesta;
         const helloBubu = await axios.get('http://localhost:8080/users').then(res => respuesta = res);
         console.log('Respuesta Exitosa '+ respuesta.status);
-        expect(respuesta.status).to.equal(200);
-        
+        expect(respuesta.status).to.equal(200);  
+        testStep();
     });
     
     it('Validar Usuario Agregado Exitosamente', function(done)
@@ -23,7 +35,7 @@ function suite(){
         done();
         })
         .catch(err => {
-            done(err)
+            done(err);
         });
         
        
@@ -38,14 +50,12 @@ function suite(){
         done();
         })
         .catch(err => {
-            done(err)
+            done(err);
         });
         
     });
 
-    before(function(){
-        user = new User('Bubucela', '24.144.222-0', 'Casa 123', '4563212');
-    })
+    
 
 }
 

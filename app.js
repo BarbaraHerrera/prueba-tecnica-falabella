@@ -1,17 +1,26 @@
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
-let user = require('./assets/json/user.json')
-let products = require('./assets/json/products.json')
-let orders = require('./assets/json/orders.json')
+
+let axios = require('axios');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-let userList = new Array(user);
-let respuesta;
-let respuesta2;
-let respuesta3;
+let userList = new Array();
+
+
+let respuestaUsers;
+    
+let respuestaProducto;
+let respuestaOrden;
+
+axios({
+    method: "get",
+    url: "http://localhost:3000/users",
+  }).then(function(resp) {
+    userList.push(resp.data);
+});
 
 //USUARIOS
 app.route('/users')
@@ -25,10 +34,10 @@ app.route('/users')
 
     if (!userList.find(e => e.rut == req.body.rut)){
         userList.push(req.body);
-        respuesta = userList;
+        respuestaUsers = userList;
 
     } else {
-        respuesta = {
+        respuestaUsers = {
             error : true,
             codigo : 500,
             mensaje : 'El usuario ya fue creado previamente'
@@ -36,11 +45,19 @@ app.route('/users')
         res.status(500);
     }
 
-    res.send(respuesta);
+    res.send(respuestaUsers);
 })
 
 //PRODUCTOS
-let productList = new Array(products);
+let productList = new Array();
+
+axios({
+    method: "get",
+    url: "http://localhost:3000/products",
+  }).then(function(resp) {
+    productList.push(resp.data);
+});
+
 app.route('/products').
 get(function(req, res)
 {
@@ -51,16 +68,16 @@ get(function(req, res)
 {
     if(!productList.find(p => p.productName == req.body.productName)){
         productList.push(req.body);
-        respuesta2 = productList;
+        respuestaProducto = productList;
     }else {
-        respuesta2 = {
+        respuestaProducto = {
             error : true,
             codigo : 500,
             mensaje : 'El producto ya fue añadido'
         }
         res.status(500);
     }
-    res.send(respuesta2);
+    res.send(respuestaProducto);
 })
 
 //ORDENES
@@ -85,25 +102,34 @@ get(function(req, res)
 
         let foundProd = productList.find(e => e.productId == pList[i].productId);
 
-        var stock = foundProd.stock;
-
-        if( stock >= pList[i].quantity){
-
-            orderList.push(req.body);
-            
-            foundProd.stock = foundProd.stock - pList[i].quantity;
-            
-            respuesta3 = orderList;
+        if (foundProd) {
+            var stock = foundProd.stock;
+    
+            if( stock >= pList[i].quantity){
+    
+                orderList.push(req.body);
+                
+                foundProd.stock = foundProd.stock - pList[i].quantity;
+                
+                respuestaOrden = orderList;
+            } else {
+                respuestaOrden = {
+                    error: true,
+                    statusCode: 500,
+                    mensaje: `No hay stock disponible del producto ${foundProd.productName}`
+                }
+            }
         } else {
-            respuesta3 = {
+            respuestaOrden = {
                 error: true,
                 statusCode: 500,
-                mensaje: `No hay stock disponible del producto ${foundProd.productName}`
+                mensaje: `Producto no encontrado`
             }
         }
+
     }
 
-    res.send(respuesta3);
+    res.send(respuestaOrden);
 
 })
 
