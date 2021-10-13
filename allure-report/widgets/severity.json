@@ -1,1 +1,81 @@
-[ ]
+[ {
+  "uid" : "f25267d9bceab793",
+  "name" : "Producto Sin Stock",
+  "time" : {
+    "start" : 1634091636526,
+    "stop" : 1634091636526,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "171a598e72146eb4",
+  "name" : "Detalle de orden",
+  "time" : {
+    "start" : 1634091636522,
+    "stop" : 1634091636525,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "88223f4ae801def7",
+  "name" : "Validar producto añadido previamente",
+  "time" : {
+    "start" : 1634091636511,
+    "stop" : 1634091636519,
+    "duration" : 8
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "c2a5af71e5c19193",
+  "name" : "Validar Usuario Agregado Exitosamente",
+  "time" : {
+    "start" : 1634091636349,
+    "stop" : 1634091636379,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5ce15edf6c193ced",
+  "name" : "Producto agregado correctamente",
+  "time" : {
+    "start" : 1634091636505,
+    "stop" : 1634091636511,
+    "duration" : 6
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e25e9b2882044d16",
+  "name" : "Consulta exitosa de productos",
+  "time" : {
+    "start" : 1634091636502,
+    "stop" : 1634091636505,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cf2735118c6663a0",
+  "name" : "Validar Usuario Agregado Previamente",
+  "time" : {
+    "start" : 1634091636380,
+    "stop" : 1634091636391,
+    "duration" : 11
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "6bfa196798722a18",
+  "name" : "Consulta exitosa de usuarios",
+  "time" : {
+    "start" : 1634091636336,
+    "stop" : 1634091636348,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

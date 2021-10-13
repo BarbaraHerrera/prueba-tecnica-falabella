@@ -3,16 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "pretest": "rm -rf allure-results",
-    "test": "mocha",
+    "test": "npm-run-all -r -p test:*",
+    "test:mocha": "sleep 1 && multi='progress=- mocha-allure-reporter=-' mocha",
     "server": "json-server --watch ./assets/db/db.json",
     "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "allure-commandline": "^2.13.8",
+    "chai": "^4.0.2",
+    "i": "^0.3.7",
+    "mocha": "^3.3.0",
+    "mocha-multi": "^0.11.0",
+    "npm-run-all": "^4.0.2",
     "axios": "^0.22.0",
     "body-parser": "^1.19.0",
     "chai-http": "^4.3.0",
@@ -20,16 +30,5 @@
     "json-server": "^0.17.0",
     "mocha-allure-reporter": "^1.4.0",
     "save": "^2.4.0"
-  },
-  "devDependencies": {
-    "allure-commandline": "^2.13.8",
-    "allure-mocha": "^2.0.0-beta.13",
-    "chai": "^4.3.4",
-    "chromedriver": "^94.0.0",
-    "i": "^0.3.7",
-    "mocha": "^9.1.2",
-    "mocha-multi": "^1.1.5",
-    "npm-run-all": "^4.1.5",
-    "request": "^2.88.2"
   }
 }

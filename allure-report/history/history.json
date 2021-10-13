@@ -1,1 +1,156 @@
-{ }
+{
+  "6a72729a2994f5b5bb6fbdca13d4a760" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "171a598e72146eb4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1634091636522,
+        "stop" : 1634091636525,
+        "duration" : 3
+      }
+    } ]
+  },
+  "8031df76d83154b7f4e8f019457dd332" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f25267d9bceab793",
+      "status" : "passed",
+      "time" : {
+        "start" : 1634091636526,
+        "stop" : 1634091636526,
+        "duration" : 0
+      }
+    } ]
+  },
+  "bc7a11d8ec4edcdbdb8a8f72a8500b56" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e25e9b2882044d16",
+      "status" : "passed",
+      "time" : {
+        "start" : 1634091636502,
+        "stop" : 1634091636505,
+        "duration" : 3
+      }
+    } ]
+  },
+  "3df4ef333c7e487ab3d07e4e25e1e0a7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5ce15edf6c193ced",
+      "status" : "passed",
+      "time" : {
+        "start" : 1634091636505,
+        "stop" : 1634091636511,
+        "duration" : 6
+      }
+    } ]
+  },
+  "1e4932025e41f2609006f8a8353bd1b0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6bfa196798722a18",
+      "status" : "passed",
+      "time" : {
+        "start" : 1634091636336,
+        "stop" : 1634091636348,
+        "duration" : 12
+      }
+    } ]
+  },
+  "7b59e0469bedeb02c223cf6bd42043eb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c2a5af71e5c19193",
+      "status" : "passed",
+      "time" : {
+        "start" : 1634091636349,
+        "stop" : 1634091636379,
+        "duration" : 30
+      }
+    } ]
+  },
+  "d7925f0b12caed52106e31cb5b5612c6" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "88223f4ae801def7",
+      "status" : "failed",
+      "statusDetails" : "expected { Object (_events, _eventsCount, ...) } to have status code 500 but got 200",
+      "time" : {
+        "start" : 1634091636511,
+        "stop" : 1634091636519,
+        "duration" : 8
+      }
+    } ]
+  },
+  "1053e57267b671663b350ebaacc603b7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "cf2735118c6663a0",
+      "status" : "broken",
+      "statusDetails" : "Request failed with status code 500",
+      "time" : {
+        "start" : 1634091636380,
+        "stop" : 1634091636391,
+        "duration" : 11
+      }
+    } ]
+  }
+}

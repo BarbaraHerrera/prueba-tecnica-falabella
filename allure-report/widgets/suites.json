@@ -1,4 +1,37 @@
 {
-  "total" : 0,
-  "items" : [ ]
+  "total" : 3,
+  "items" : [ {
+    "uid" : "25aff390f0f77a647a76a6a8827769fb",
+    "name" : "Test de aceptacion Productos - Casos de Prueba",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    }
+  }, {
+    "uid" : "39a33df3effb2ae387a23867835f8dcb",
+    "name" : "Test de aceptacion Usuarios - Casos de prueba",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    }
+  }, {
+    "uid" : "f9eb0eb68c76c0a1d25abb490856d65b",
+    "name" : "Test de aceptacion Ordenes - Casos de Prueba",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  } ]
 }

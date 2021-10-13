@@ -1,5 +1,47 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Request failed with status code 500",
+      "children" : [ {
+        "name" : "Validar Usuario Agregado Previamente",
+        "uid" : "cf2735118c6663a0",
+        "parentUid" : "fc59132079d939df6f53fa9448b2eaca",
+        "status" : "broken",
+        "time" : {
+          "start" : 1634091636380,
+          "stop" : 1634091636391,
+          "duration" : 11
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fc59132079d939df6f53fa9448b2eaca"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expected { Object (_events, _eventsCount, ...) } to have status code 500 but got 200",
+      "children" : [ {
+        "name" : "Validar producto añadido previamente",
+        "uid" : "88223f4ae801def7",
+        "parentUid" : "46ddb3abd50f1fd65f2f5ebacda52fc4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1634091636511,
+          "stop" : 1634091636519,
+          "duration" : 8
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "46ddb3abd50f1fd65f2f5ebacda52fc4"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
 }

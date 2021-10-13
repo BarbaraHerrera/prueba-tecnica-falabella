@@ -37,6 +37,7 @@ app.route('/users')
         respuestaUsers = userList;
 
     } else {
+        console.log('ha pasado por aqui')
         respuestaUsers = {
             error : true,
             codigo : 500,

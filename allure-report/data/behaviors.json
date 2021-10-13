@@ -1,5 +1,109 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Consulta exitosa de usuarios",
+    "uid" : "6bfa196798722a18",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634091636336,
+      "stop" : 1634091636348,
+      "duration" : 12
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validar Usuario Agregado Exitosamente",
+    "uid" : "c2a5af71e5c19193",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634091636349,
+      "stop" : 1634091636379,
+      "duration" : 30
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validar Usuario Agregado Previamente",
+    "uid" : "cf2735118c6663a0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1634091636380,
+      "stop" : 1634091636391,
+      "duration" : 11
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Consulta exitosa de productos",
+    "uid" : "e25e9b2882044d16",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634091636502,
+      "stop" : 1634091636505,
+      "duration" : 3
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Producto agregado correctamente",
+    "uid" : "5ce15edf6c193ced",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634091636505,
+      "stop" : 1634091636511,
+      "duration" : 6
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validar producto añadido previamente",
+    "uid" : "88223f4ae801def7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1634091636511,
+      "stop" : 1634091636519,
+      "duration" : 8
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Detalle de orden",
+    "uid" : "171a598e72146eb4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634091636522,
+      "stop" : 1634091636525,
+      "duration" : 3
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Producto Sin Stock",
+    "uid" : "f25267d9bceab793",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634091636526,
+      "stop" : 1634091636526,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
 }

@@ -1,6 +1,9 @@
-var usuarioTest = require('./lib/subject/suites/usuario.test')
-var productoTest = require('./lib/subject/suites/producto.test')
-var ordenTest = require('./lib/subject/suites/orden.test')
+var usuarioTest = require('./lib/subject/suites/usuario.test');
+var productoTest = require('./lib/subject/suites/producto.test');
+var ordenTest = require('./lib/subject/suites/orden.test');
+
+//require('mocha-allure-reporter');
+
 /**
  * Test-Page
  * Suite principal de pruebas
