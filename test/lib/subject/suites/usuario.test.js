@@ -1,4 +1,5 @@
 var expect = require('chai').expect;
+require('chai').should;
 var axios = require('axios');
 let User = require('../../../../model/User');
 
@@ -14,14 +15,21 @@ function suite(){
         user = new User('Bubucela', '24.144.222-0', 'Casa 123', '4563212');
     });
 
+    const getEmpty = allure.createStep("Paso 0 - Consulta datos vacios", async (done) => {
+            
+        expect('').to.be.empty;
+    });
+
     const getUser = allure.createStep("Paso 1 - Consultar usuarios", async () => {
         let respuesta;
         const helloBubu = await axios.get('http://localhost:8080/users').then(res => respuesta = res);
         console.log('Respuesta Exitosa '+ respuesta.status);
-        expect(respuesta.status).to.equal(200);  
+        expect(respuesta.status).to.equal(200);
     });
 
     const addUserWithSucess = allure.createStep("Paso 2 - Agregar usuário de manera exitosa", async (done) => {
+            
+        expect('').to.be.empty;
         await axios.post('http://localhost:8080/users', user).then(res => { 
             expect(res.status).to.equal(200);
             done();
@@ -47,8 +55,13 @@ function suite(){
 
     const throwError = allure.createStep("Detalle del test erroneo", (err) => {
         throw new Error(err);
-    });
+      });
     
+     it('Consulta json vacio', async function()
+      {
+         getEmpty();
+    });
+
     it('Consulta exitosa de usuarios', async function()
     {
        getUser();
